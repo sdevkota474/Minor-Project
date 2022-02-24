@@ -1,0 +1,22 @@
+<html>
+  <head> 
+    <title> </title>
+  </head>
+  <body>
+     <p> Welcome, {{request.user}} </p> 
+    <h1>Drop your vacancy here </h1>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+    <input type="file" name="document">
+    <button type="submit">Upload</button>
+    </form> <br>
+    <h2>OR</h2> <br>
+    <h1>Drop your CV    </h1>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+    <input type="file" name="document">
+    <button type="submit">Upload</button>
+    </form>
+    <a href="/logout">logout </a>
+  </body>
+  </html>
